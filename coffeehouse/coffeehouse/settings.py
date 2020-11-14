@@ -17,6 +17,7 @@ from typing import List
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
+PROJECT_DIR = Path(__file__).resolve(strict=True).parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -57,7 +58,7 @@ ROOT_URLCONF = "coffeehouse.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": ["%s/templates/" % PROJECT_DIR],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
