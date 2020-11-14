@@ -16,5 +16,13 @@ def detail(
 ) -> HttpResponse:
     if location is None:
         raise ValueError("Expected a value for 'location'; got None")
-    # Access store_id with 'store_id' variable
+    # Access store_id param with 'store_id' variable and location param with
+    # 'location' variable
+    # Extract 'hours' or 'map' value appended to url as
+    # ?hours=sunday&map=flash
+    request.GET.get("hours", "")
+    request.GET.get("map", "")
+    # given /stores/1/?hours=sunday&map=flash,
+    #   'hours' has value 'sunday' or '' if hours not in url
+    #   'map' has value 'flash' or '' if map not in url
     return render(request, "stores/detail.html")
