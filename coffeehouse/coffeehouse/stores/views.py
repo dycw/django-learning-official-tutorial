@@ -6,6 +6,7 @@ from django.core.handlers.wsgi import WSGIRequest
 from django.http import HttpResponse
 from django.shortcuts import render
 
+
 # Create your views here.
 
 
@@ -26,3 +27,7 @@ def detail(
     #   'hours' has value 'sunday' or '' if hours not in url
     #   'map' has value 'flash' or '' if map not in url
     return render(request, "stores/detail.html")
+
+
+def index(request: WSGIRequest) -> HttpResponse:
+    return render(request, "stores/index.html")

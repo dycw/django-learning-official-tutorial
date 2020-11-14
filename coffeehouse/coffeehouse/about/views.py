@@ -12,3 +12,7 @@ def contact(request: WSGIRequest) -> HttpResponse:
     # Content from request or database extracted here
     # and passed to the template for display
     return render(request, "about/contact.html")
+
+
+def index(request: WSGIRequest) -> HttpResponse:
+    return render(request, "about/index.html")

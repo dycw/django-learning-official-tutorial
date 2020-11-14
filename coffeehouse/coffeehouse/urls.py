@@ -20,15 +20,27 @@ from django.urls import include
 from django.urls import path
 from django.views.generic import TemplateView
 
-from coffeehouse.about import views as about_views
-from coffeehouse.stores import views as stores_views
+from .about import views as about_views
+from .stores import views as stores_views
+
+
+about_patterns = [
+    path("", about_views.index),
+    path("contact/", about_views.contact),
+]
+admin_patterns = [
+    path("", admin.site.urls),
+    path("doc/", include("django.contrib.admindocs.urls")),
+]
+store_patterns = [
+    path("", stores_views.index),
+    path("<int:store_id>/", stores_views.detail),
+]
 
 
 urlpatterns = [
-    path("admin/doc/", include("django.contrib.admindocs.urls")),
-    path("admin/", admin.site.urls),
     path("", TemplateView.as_view(template_name="homepage.html")),
-    path("about/", about_views.contact),
-    path("stores/", stores_views.detail, {"location": "headquarters"}),
-    path("stores/<int:store_id>/", stores_views.detail),
+    path("admin/", include(admin_patterns)),
+    path("about/", include(about_patterns)),
+    path("stores/", include(store_patterns), {"location": "headquarters"}),
 ]
