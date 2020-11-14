@@ -21,6 +21,7 @@ from django.urls import path
 from django.views.generic import TemplateView
 
 from coffeehouse.about import views as about_views
+from coffeehouse.stores import views as stores_views
 
 
 urlpatterns = [
@@ -28,4 +29,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", TemplateView.as_view(template_name="homepage.html")),
     path("about/", about_views.contact),
+    path("stores/<int:store_id>/", stores_views.detail),
 ]
