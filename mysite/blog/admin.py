@@ -1,4 +1,8 @@
 from __future__ import annotations
 
+from django.contrib.admin import site
 
-# Register your models here.
+from .models import Post
+
+
+site.register(Post)
