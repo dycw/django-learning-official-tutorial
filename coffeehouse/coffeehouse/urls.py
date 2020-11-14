@@ -29,6 +29,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", TemplateView.as_view(template_name="homepage.html")),
     path("about/", about_views.contact),
-    path("stores/", stores_views.detail),
+    path("stores/", stores_views.detail, {"location": "headquarters"}),
     path("stores/<int:store_id>/", stores_views.detail),
 ]
