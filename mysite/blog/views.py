@@ -1,6 +1,9 @@
 from __future__ import annotations
 
 from django.core.handlers.wsgi import WSGIRequest
+from django.core.paginator import EmptyPage
+from django.core.paginator import PageNotAnInteger
+from django.core.paginator import Paginator
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 from django.shortcuts import render
@@ -9,7 +12,17 @@ from .models import Post
 
 
 def post_list(request: WSGIRequest) -> HttpResponse:
-    posts = Post.published.all()
+    object_list = Post.published.all()
+    paginator = Paginator(object_list, 3)  # 3 posts in each page
+    page = request.GET.get("page")
+    try:
+        posts = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer deliver the first page
+        posts = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range deliver last page of results
+        posts = paginator.page(paginator.num_pages)
     return render(
         request,
         "blog/post/list.html",
