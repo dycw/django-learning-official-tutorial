@@ -2,7 +2,13 @@ from __future__ import annotations
 
 from django.contrib.auth.models import User
 from django.db import models
+from django.db.models.query import QuerySet
 from django.utils import timezone
+
+
+class PublishedManager(models.Manager):
+    def get_queryset(self: PublishedManager) -> QuerySet:
+        return super().get_queryset().filter(status="published")
 
 
 class Post(models.Model):
@@ -29,6 +35,9 @@ class Post(models.Model):
         choices=STATUS_CHOICES,
         default="draft",
     )
+
+    objects = models.Manager()  # The default manager.
+    published = PublishedManager()  # Our custom manager.
 
     class Meta:
         ordering = ("-publish",)
