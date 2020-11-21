@@ -3,6 +3,7 @@ from __future__ import annotations
 from django.urls import path
 
 from .views import post_detail
+from .views import post_share
 from .views import PostListView
 
 
@@ -15,4 +16,5 @@ urlpatterns = [
         post_detail,
         name="post_detail",
     ),
+    path("<int:post_id>/share/", post_share, name="post_share"),
 ]
