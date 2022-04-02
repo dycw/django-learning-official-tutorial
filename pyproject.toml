@@ -43,7 +43,6 @@ pytest = "^7.1"
 rich = "^12.0"
 # flake8 extensions
 flake8-absolute-import = "^1.0"
-flake8-alphabetize = "^0.0"
 flake8-annotations = "^2.8"
 flake8-bandit = "^3.0"
 flake8-bugbear = "^22.3"
