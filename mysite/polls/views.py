@@ -1,14 +1,16 @@
 from beartype import beartype
 from django.core.handlers.wsgi import WSGIRequest
 from django.http import HttpResponse
+from django.template.loader import get_template
 from polls.models import Question
 
 
 @beartype
-def index(_: WSGIRequest) -> HttpResponse:
+def index(request: WSGIRequest) -> HttpResponse:
     latest_question_list = Question.objects.order_by("-pub_date")[:5]
-    output = ", ".join([q.question_text for q in latest_question_list])
-    return HttpResponse(output)
+    template = get_template("polls/index.html")
+    context = {"latest_question_list": latest_question_list}
+    return HttpResponse(template.render(context, request))
 
 
 @beartype
