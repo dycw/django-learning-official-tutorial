@@ -28,11 +28,11 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-click = "~8.0.4" # https://github.com/dask/distributed/issues/6013
-typed-settings = "^1.0.0"
+django = "^4.0.3"
 
 [tool.poetry.dev-dependencies]
 black = "^22.3"
+click = "~8.0.4" # https://github.com/dask/distributed/issues/6013
 flake8 = "^4.0"
 hypothesis = "^6.35"
 isort = "^5.10"
