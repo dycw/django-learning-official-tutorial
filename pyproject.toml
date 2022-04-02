@@ -73,6 +73,7 @@ pep8-naming = "^0.12"
 pytest-instafail = "^0.4"
 pytest-randomly = "^3.8"
 pytest-xdist = "^2.3"
+mypy = "^0.942"
 
 [tool.pytest.ini_options]
 addopts = ["-rsxX", "--color=auto", "--strict-markers"]
