@@ -20,7 +20,6 @@ repos:
           - flake8-eradicate
           - flake8-executable
           - flake8-implicit-str-concat
-          - flake8-mutable
           - flake8-no-pep420
           - flake8-pep3101
           - flake8-pie
@@ -123,7 +122,6 @@ repos:
           - flake8-eradicate
           - flake8-executable
           - flake8-implicit-str-concat
-          - flake8-mutable
           - flake8-no-pep420
           - flake8-pep3101
           - flake8-pie
