@@ -21,7 +21,7 @@ virtual_env = ".venv/bin/python"
 
 [tool.poetry]
 name = "django-learning"
-version = "0.1.0"
+version = "0.1.1"
 description = "Learning the Django framework"
 authors = ["Derek Wan <d.wan@icloud.com>"]
 license = "MIT"
@@ -75,7 +75,7 @@ pytest-xdist = "^2.3"
 [tool.pytest.ini_options]
 addopts = ["-rsxX", "--color=auto", "--strict-markers"]
 filterwarnings = ["error", "ignore::DeprecationWarning"]
-minversion = "6.0"
+minversion = "7.0"
 testpaths = "src/tests"
 xfail_strict = true
 looponfailroots = "src"
