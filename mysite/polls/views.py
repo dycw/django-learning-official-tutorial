@@ -1,6 +1,7 @@
 from beartype import beartype
 from django.http import HttpResponse
 from django.http.request import HttpRequest
+from django.shortcuts import get_object_or_404
 from django.shortcuts import render
 from polls.models import Question
 
@@ -13,8 +14,9 @@ def index(request: HttpRequest) -> HttpResponse:
 
 
 @beartype
-def detail(_: HttpRequest, question_id: int) -> HttpResponse:
-    return HttpResponse(f"You're looking at question {question_id}.")
+def detail(request: HttpRequest, question_id: int) -> HttpResponse:
+    question = get_object_or_404(Question, pk=question_id)
+    return render(request, "polls/detail.html", {"question": question})
 
 
 @beartype
