@@ -368,20 +368,6 @@ python-versions = ">=3.7"
 flake8 = ">=3.0,<3.2.0 || >3.2.0"
 
 [[package]]
-name = "flake8-pep3101"
-version = "1.3.0"
-description = "Checks for old string formatting."
-category = "dev"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-flake8 = ">=3.0"
-
-[package.extras]
-test = ["pytest", "testfixtures"]
-
-[[package]]
 name = "flake8-pie"
 version = "0.15.0"
 description = "A flake8 extension that implements misc. lints"
@@ -448,28 +434,6 @@ astor = ">=0.1"
 flake8 = ">=3.7"
 
 [[package]]
-name = "flake8-string-format"
-version = "0.3.0"
-description = "string format checker, plugin for flake8"
-category = "dev"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-flake8 = "*"
-
-[[package]]
-name = "flake8-typing-imports"
-version = "1.12.0"
-description = "flake8 plugin which checks that typing imports are properly guarded"
-category = "dev"
-optional = false
-python-versions = ">=3.6.1"
-
-[package.dependencies]
-flake8 = ">=3.8"
-
-[[package]]
 name = "flake8-unused-arguments"
 version = "0.0.9"
 description = "flake8 extension to warn on unused function arguments"
@@ -479,22 +443,6 @@ python-versions = "*"
 
 [package.dependencies]
 flake8 = ">3.0.0"
-
-[[package]]
-name = "flake8-use-fstring"
-version = "1.3"
-description = "Flake8 plugin for string formatting style."
-category = "dev"
-optional = false
-python-versions = ">=3.6"
-
-[package.dependencies]
-flake8 = ">=3"
-
-[package.extras]
-ci = ["coverage (>=4.0.0,<5.0.0)", "pytest (>=4)", "pytest-cov (>=2)", "flake8-builtins", "flake8-commas", "flake8-fixme", "flake8-print", "flake8-quotes", "flake8-todo", "coveralls"]
-dev = ["coverage (>=4.0.0,<5.0.0)", "pytest (>=4)", "pytest-cov (>=2)", "flake8-builtins", "flake8-commas", "flake8-fixme", "flake8-print", "flake8-quotes", "flake8-todo"]
-test = ["coverage (>=4.0.0,<5.0.0)", "pytest (>=4)", "pytest-cov (>=2)", "flake8-builtins", "flake8-commas", "flake8-fixme", "flake8-print", "flake8-quotes", "flake8-todo"]
 
 [[package]]
 name = "flake8-variables-names"
@@ -1008,7 +956,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "39fbc068364e8ce97d8d9f7bc1db650512862bebf814b687ef46fc2461635957"
+content-hash = "08b682cc5919009eea9bb088732113aac395349b3daaa7c242a8d48e8a33a96a"
 
 [metadata.files]
 asgiref = [
@@ -1150,10 +1098,6 @@ flake8-no-pep420 = [
     {file = "flake8-no-pep420-2.2.0.tar.gz", hash = "sha256:a280a840f84682f683b33b348ad8d3434309b544c142be539f168e13cc16abea"},
     {file = "flake8_no_pep420-2.2.0-py3-none-any.whl", hash = "sha256:a1622f03be67609b81a9e6790e7e69c310eb6fbd7bb81817f7fb91902312bc76"},
 ]
-flake8-pep3101 = [
-    {file = "flake8-pep3101-1.3.0.tar.gz", hash = "sha256:86e3eb4e42de8326dcd98ebdeaf9a3c6854203a48f34aeb3e7e8ed948107f512"},
-    {file = "flake8_pep3101-1.3.0-py2.py3-none-any.whl", hash = "sha256:a5dae1caca1243b2b40108dce926d97cf5a9f52515c4a4cbb1ffe1ca0c54e343"},
-]
 flake8-pie = [
     {file = "flake8-pie-0.15.0.tar.gz", hash = "sha256:a2d1e67a374d925f688300e9d0e202d1827a0d91e0a11114f712beee639bdc7c"},
     {file = "flake8_pie-0.15.0-py3-none-any.whl", hash = "sha256:47fd9d232b419f8db7a6465dee95cc24b385b1b8bdfd62b65250d70eaa06fc89"},
@@ -1178,20 +1122,9 @@ flake8-simplify = [
     {file = "flake8_simplify-0.19.2-py3-none-any.whl", hash = "sha256:9c1e96ba738f9057a561697d67df7a9058898ac6313a67eda09942255cba6d38"},
     {file = "flake8_simplify-0.19.2.tar.gz", hash = "sha256:a30ef76bf1c0cb89a52a8a5cee37667688e61a66735e997c08d56cd002f9e3e9"},
 ]
-flake8-string-format = [
-    {file = "flake8-string-format-0.3.0.tar.gz", hash = "sha256:65f3da786a1461ef77fca3780b314edb2853c377f2e35069723348c8917deaa2"},
-    {file = "flake8_string_format-0.3.0-py2.py3-none-any.whl", hash = "sha256:812ff431f10576a74c89be4e85b8e075a705be39bc40c4b4278b5b13e2afa9af"},
-]
-flake8-typing-imports = [
-    {file = "flake8_typing_imports-1.12.0-py2.py3-none-any.whl", hash = "sha256:4a072a5f5975caedfbd364fb54755983cae812e2b2f0125f3a71237868971a25"},
-    {file = "flake8_typing_imports-1.12.0.tar.gz", hash = "sha256:d9482d7a3dd3d777915c7f8907a166b405aaf8314ecceb1be2b642e9375d87ed"},
-]
 flake8-unused-arguments = [
     {file = "flake8-unused-arguments-0.0.9.tar.gz", hash = "sha256:80e437b126a441ba048dfc9f01987fbec1ea8521e65c00681aecdf4c466fa27b"},
     {file = "flake8_unused_arguments-0.0.9-py3-none-any.whl", hash = "sha256:b3b02aa5379e2edc7a3fc98e4bd12b2febf0573131a12fb7d698c04c0a8effda"},
-]
-flake8-use-fstring = [
-    {file = "flake8-use-fstring-1.3.tar.gz", hash = "sha256:1bd4a409adbb93e64e711fdd26b88759c33792e3899f174edc68ddf7307e81b6"},
 ]
 flake8-variables-names = [
     {file = "flake8_variables_names-0.0.5-py3-none-any.whl", hash = "sha256:e3277031696bbe10b5132b49938cde1d70fcae9561533b7bd7ab8e69cb27addb"},
