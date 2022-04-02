@@ -496,17 +496,6 @@ python-versions = "*"
 flake8 = "*"
 
 [[package]]
-name = "flake8-type-checking"
-version = "1.3.3"
-description = "A flake8 plugin for managing type-checking imports & forward references"
-category = "dev"
-optional = false
-python-versions = ">=3.8,<4.0"
-
-[package.dependencies]
-flake8 = "*"
-
-[[package]]
 name = "flake8-typing-imports"
 version = "1.12.0"
 description = "flake8 plugin which checks that typing imports are properly guarded"
@@ -1064,7 +1053,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "a5eca93fe0e638588d5c426ef5f609a00e9991f824701e7407aa7d931041b220"
+content-hash = "b3ae83201c69743ed45dfa2f867c1316d699167f62255ba7382b1799b3e19cfc"
 
 [metadata.files]
 asgiref = [
@@ -1249,10 +1238,6 @@ flake8-simplify = [
 flake8-string-format = [
     {file = "flake8-string-format-0.3.0.tar.gz", hash = "sha256:65f3da786a1461ef77fca3780b314edb2853c377f2e35069723348c8917deaa2"},
     {file = "flake8_string_format-0.3.0-py2.py3-none-any.whl", hash = "sha256:812ff431f10576a74c89be4e85b8e075a705be39bc40c4b4278b5b13e2afa9af"},
-]
-flake8-type-checking = [
-    {file = "flake8-type-checking-1.3.3.tar.gz", hash = "sha256:a9d7523ee6dbefcaf9010b0ae3ddca938232e8c0d7b89f26e082e29aebcb7823"},
-    {file = "flake8_type_checking-1.3.3-py3-none-any.whl", hash = "sha256:241fb3533b64271f811fcb6d79f45609f69c2a2d16527289b98be68ae9c01fa4"},
 ]
 flake8-typing-imports = [
     {file = "flake8_typing_imports-1.12.0-py2.py3-none-any.whl", hash = "sha256:4a072a5f5975caedfbd364fb54755983cae812e2b2f0125f3a71237868971a25"},

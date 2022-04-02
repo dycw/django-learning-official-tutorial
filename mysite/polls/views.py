@@ -20,12 +20,12 @@ def detail(request: HttpRequest, question_id: int) -> HttpResponse:
 
 
 @beartype
-def results(_: HttpRequest, question_id: int) -> HttpResponse:
+def results(_request: HttpRequest, question_id: int) -> HttpResponse:
     return HttpResponse(
         f"You're looking at the results of question {question_id}."
     )
 
 
 @beartype
-def vote(_: HttpRequest, question_id: int) -> HttpResponse:
+def vote(_request: HttpRequest, question_id: int) -> HttpResponse:
     return HttpResponse(f"You're voting on question {question_id}.")
