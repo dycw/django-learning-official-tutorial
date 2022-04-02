@@ -8,10 +8,11 @@ https://docs.djangoproject.com/en/4.0/howto/deployment/wsgi/
 """
 
 import os
+from typing import Any
 
 from django.core.wsgi import get_wsgi_application
 
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
 
-application = get_wsgi_application()
+application: Any = get_wsgi_application()

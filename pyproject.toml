@@ -85,12 +85,11 @@ looponfailroots = "src"
 include = ["src"]
 exclude = [
   "**/__pycache__",
+  "**/migrations/**",
   ".git",
   ".hypothesis",
   ".pytest_cache",
   ".venv",
-  "dist",
-  "notebooks",
 ]
 venvPath = ".venv"
 pythonVersion = "3.10"
@@ -99,7 +98,7 @@ executionEnvironments = [{ root = "src" }]
 typeCheckingMode = "strict"
 reportMissingModuleSource = "error"
 reportMissingTypeStubs = false
-reportPrivateUsage = false
-reportUnknownArgumentType = false
-reportUnknownVariableType = false
-reportUnknownMemberType = false
+# reportPrivateUsage = false
+# reportUnknownArgumentType = false
+# reportUnknownVariableType = false
+# reportUnknownMemberType = false
