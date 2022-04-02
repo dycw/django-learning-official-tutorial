@@ -1,5 +1,3 @@
-from typing import cast
-
 from beartype import beartype
 from django.core.handlers.wsgi import WSGIRequest
 from django.http import HttpResponse
@@ -8,9 +6,7 @@ from polls.models import Question
 
 @beartype
 def index(_: WSGIRequest) -> HttpResponse:
-    latest_question_list = cast(
-        list[Question], Question.objects.order_by("-pub_date")
-    )[:5]
+    latest_question_list = Question.objects.order_by("-pub_date")[:5]
     output = ", ".join([q.question_text for q in latest_question_list])
     return HttpResponse(output)
 
