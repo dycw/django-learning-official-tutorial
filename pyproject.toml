@@ -98,7 +98,12 @@ executionEnvironments = [{ root = "src" }]
 typeCheckingMode = "strict"
 reportMissingModuleSource = "error"
 reportMissingTypeStubs = false
-# reportPrivateUsage = false
-# reportUnknownArgumentType = false
-# reportUnknownVariableType = false
-# reportUnknownMemberType = false
+reportUnknownArgumentType = false
+reportUnknownVariableType = false
+reportCallInDefaultInitializer = "error"
+reportImplicitStringConcatenation = false
+reportMissingSuperCall = "error"
+reportPropertyTypeMismatch = "error"
+reportUninitializedInstanceVariable = "error"
+reportUnnecessaryTypeIgnoreComment = "error"
+reportUnusedCallResult = "error"

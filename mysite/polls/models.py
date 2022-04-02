@@ -1,4 +1,4 @@
-from typing import Any
+import datetime as dt
 from typing import cast
 
 from django.db.models import CASCADE
@@ -10,8 +10,8 @@ from django.db.models import Model
 
 
 class Question(Model):  # type: ignore
-    question_text: Any = CharField(max_length=200)
-    pub_date: Any = DateTimeField("date published")
+    question_text = cast(str, CharField(max_length=200))
+    pub_date = cast(dt.datetime, DateTimeField("date published"))
 
 
 class Choice(Model):  # type: ignore

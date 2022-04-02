@@ -13,6 +13,6 @@ from typing import Any
 from django.core.asgi import get_asgi_application
 
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
+_ = os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
 
 application: Any = get_asgi_application()
