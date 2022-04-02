@@ -1,16 +1,15 @@
 from beartype import beartype
 from django.core.handlers.wsgi import WSGIRequest
 from django.http import HttpResponse
-from django.template.loader import get_template
+from django.shortcuts import render
 from polls.models import Question
 
 
 @beartype
 def index(request: WSGIRequest) -> HttpResponse:
     latest_question_list = Question.objects.order_by("-pub_date")[:5]
-    template = get_template("polls/index.html")
     context = {"latest_question_list": latest_question_list}
-    return HttpResponse(template.render(context, request))
+    return render(request, "polls/index.html", context)
 
 
 @beartype
