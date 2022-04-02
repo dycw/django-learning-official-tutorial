@@ -140,7 +140,7 @@ repos:
     hooks:
       - id: shellcheck
   - repo: https://github.com/dycw/pre-commit-hooks
-    rev: 0.3.6
+    rev: 0.3.11
     hooks:
       - id: bump-version
         args: [--setup-cfg]
