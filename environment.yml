@@ -1,7 +1,0 @@
-name: django-learning
-
-dependencies:
-  - python = 3.9.*
-  - pip
-  - pip:
-      - --requirement=requirements/dev.txt
