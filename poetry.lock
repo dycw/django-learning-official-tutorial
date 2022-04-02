@@ -357,43 +357,6 @@ python-versions = ">=3.6"
 flake8 = ">=3.0.0"
 
 [[package]]
-name = "flake8-implicit-str-concat"
-version = "0.3.0"
-description = "Flake8 plugin to encourage correct string literal concatenation."
-category = "dev"
-optional = false
-python-versions = "~=3.7"
-
-[package.dependencies]
-attrs = ">=19.3"
-more-itertools = ">=8.0.2,<9"
-
-[[package]]
-name = "flake8-length"
-version = "0.3.0"
-description = "Flake8 plugin for a smart line length validation."
-category = "dev"
-optional = false
-python-versions = ">=3.6"
-
-[package.dependencies]
-flake8 = "*"
-
-[package.extras]
-dev = ["isort", "mypy", "pytest"]
-
-[[package]]
-name = "flake8-mutable"
-version = "1.2.0"
-description = "mutable defaults flake8 extension"
-category = "dev"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-flake8 = "*"
-
-[[package]]
 name = "flake8-no-pep420"
 version = "2.2.0"
 description = "A flake8 plugin to ban PEP-420 implicit namespace packages."
@@ -631,14 +594,6 @@ description = "McCabe checker, plugin for flake8"
 category = "dev"
 optional = false
 python-versions = "*"
-
-[[package]]
-name = "more-itertools"
-version = "8.12.0"
-description = "More routines for operating on iterables, beyond itertools"
-category = "dev"
-optional = false
-python-versions = ">=3.5"
 
 [[package]]
 name = "mypy"
@@ -1053,7 +1008,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "b3ae83201c69743ed45dfa2f867c1316d699167f62255ba7382b1799b3e19cfc"
+content-hash = "39fbc068364e8ce97d8d9f7bc1db650512862bebf814b687ef46fc2461635957"
 
 [metadata.files]
 asgiref = [
@@ -1191,18 +1146,6 @@ flake8-executable = [
     {file = "flake8-executable-2.1.1.tar.gz", hash = "sha256:c6230a089ad49dbeef049d8e1e89591d9823f06c829cd9d6b1ca83b4b1d7f54f"},
     {file = "flake8_executable-2.1.1-py3-none-any.whl", hash = "sha256:c1df78bf4eff1b75bff0a3d29609d096d61ccfd703a4a9485019af9a640d6e2b"},
 ]
-flake8-implicit-str-concat = [
-    {file = "flake8_implicit_str_concat-0.3.0-py2.py3-none-any.whl", hash = "sha256:a89ebc50567790fb7b83e032ed4014ae0db70e35d89e269c3323967135023600"},
-    {file = "flake8_implicit_str_concat-0.3.0.tar.gz", hash = "sha256:c0e6ae227e46238e4c87844091f8072892caeccd3bb266576a7d449eadbf53a0"},
-]
-flake8-length = [
-    {file = "flake8-length-0.3.0.tar.gz", hash = "sha256:6e3c068005b0b3b5c8345923fe3e9a107c980baa1354dd19d820018f87409427"},
-    {file = "flake8_length-0.3.0-py3-none-any.whl", hash = "sha256:8d042a8879719b72a2b6ac598d133763bbc53c463b22a64655c93237af913d4e"},
-]
-flake8-mutable = [
-    {file = "flake8-mutable-1.2.0.tar.gz", hash = "sha256:ee9b77111b867d845177bbc289d87d541445ffcc6029a0c5c65865b42b18c6a6"},
-    {file = "flake8_mutable-1.2.0-py2-none-any.whl", hash = "sha256:38fd9dadcbcda6550a916197bc40ed76908119dabb37fbcca30873666c31d2d5"},
-]
 flake8-no-pep420 = [
     {file = "flake8-no-pep420-2.2.0.tar.gz", hash = "sha256:a280a840f84682f683b33b348ad8d3434309b544c142be539f168e13cc16abea"},
     {file = "flake8_no_pep420-2.2.0-py3-none-any.whl", hash = "sha256:a1622f03be67609b81a9e6790e7e69c310eb6fbd7bb81817f7fb91902312bc76"},
@@ -1281,10 +1224,6 @@ isort = [
 mccabe = [
     {file = "mccabe-0.6.1-py2.py3-none-any.whl", hash = "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42"},
     {file = "mccabe-0.6.1.tar.gz", hash = "sha256:dd8d182285a0fe56bace7f45b5e7d1a6ebcbf524e8f3bd87eb0f125271b8831f"},
-]
-more-itertools = [
-    {file = "more-itertools-8.12.0.tar.gz", hash = "sha256:7dc6ad46f05f545f900dd59e8dfb4e84a4827b97b3cfecb175ea0c7d247f6064"},
-    {file = "more_itertools-8.12.0-py3-none-any.whl", hash = "sha256:43e6dd9942dffd72661a2c4ef383ad7da1e6a3e968a927ad7a6083ab410a688b"},
 ]
 mypy = [
     {file = "mypy-0.942-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:5bf44840fb43ac4074636fd47ee476d73f0039f4f54e86d7265077dc199be24d"},
