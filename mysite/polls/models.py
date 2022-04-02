@@ -11,7 +11,7 @@ from django.db.models import Model
 from django.utils.timezone import now
 
 
-class Question(Model):  # type: ignore
+class Question(Model):
     question_text = cast(str, CharField(max_length=200))
     pub_date = cast(dt.datetime, DateTimeField("date published"))
 
@@ -24,7 +24,7 @@ class Question(Model):  # type: ignore
         return self.pub_date >= now() - dt.timedelta(days=1)
 
 
-class Choice(Model):  # type: ignore
+class Choice(Model):
     question = cast(Question, ForeignKey(Question, on_delete=CASCADE))
     choice_text = cast(str, CharField(max_length=200))
     votes = cast(int, IntegerField(default=0))
