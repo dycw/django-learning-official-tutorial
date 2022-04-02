@@ -21,7 +21,7 @@ virtual_env = ".venv/bin/python"
 
 [tool.poetry]
 name = "django-learning"
-version = "0.1.2"
+version = "0.1.3"
 description = "Learning the Django framework"
 authors = ["Derek Wan <d.wan@icloud.com>"]
 license = "MIT"
@@ -85,12 +85,11 @@ looponfailroots = "src"
 include = ["src"]
 exclude = [
   "**/__pycache__",
+  "**/migrations/**",
   ".git",
   ".hypothesis",
   ".pytest_cache",
   ".venv",
-  "dist",
-  "notebooks",
 ]
 venvPath = ".venv"
 pythonVersion = "3.10"
@@ -99,7 +98,12 @@ executionEnvironments = [{ root = "src" }]
 typeCheckingMode = "strict"
 reportMissingModuleSource = "error"
 reportMissingTypeStubs = false
-reportPrivateUsage = false
 reportUnknownArgumentType = false
 reportUnknownVariableType = false
-reportUnknownMemberType = false
+reportCallInDefaultInitializer = "error"
+reportImplicitStringConcatenation = false
+reportMissingSuperCall = "error"
+reportPropertyTypeMismatch = "error"
+reportUninitializedInstanceVariable = "error"
+reportUnnecessaryTypeIgnoreComment = "error"
+reportUnusedCallResult = "error"

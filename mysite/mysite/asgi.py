@@ -8,10 +8,11 @@ https://docs.djangoproject.com/en/4.0/howto/deployment/asgi/
 """
 
 import os
+from typing import Any
 
 from django.core.asgi import get_asgi_application
 
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
+_ = os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
 
-application = get_asgi_application()
+application: Any = get_asgi_application()
