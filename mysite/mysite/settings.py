@@ -54,7 +54,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "mysite.urls"
 
-TEMPLATES: list[Any] = [
+TEMPLATES: list[dict[str, Any]] = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [],

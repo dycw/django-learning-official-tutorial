@@ -19,9 +19,33 @@ skip_gitignore = true
 src_paths = "src"
 virtual_env = ".venv/bin/python"
 
+[tool.mypy]
+python_version = "3.10"
+exclude = ['/migrations/']
+disallow_any_unimported = true
+disallow_any_decorated = true
+disallow_any_generics = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_return_any = true
+warn_unreachable = true
+allow_untyped_globals = true
+allow_redefinition = true
+local_partial_types = true
+strict_equality = true
+strict = true
+
 [tool.poetry]
 name = "django-learning"
-version = "0.1.4"
+version = "0.1.5"
 description = "Learning the Django framework"
 authors = ["Derek Wan <d.wan@icloud.com>"]
 license = "MIT"
@@ -34,7 +58,7 @@ django = "^4.0.3"
 [tool.poetry.dev-dependencies]
 black = "^22.3"
 click = "~8.0.4" # https://github.com/dask/distributed/issues/6013
-django-stubs = "^1.10.1"
+django-stubs = "^1.10"
 flake8 = "^4.0"
 hypothesis = "^6.35"
 isort = "^5.10"
