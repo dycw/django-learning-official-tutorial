@@ -1,5 +1,8 @@
+from typing import Any
+from typing import cast
+
 from django.contrib import admin
 from polls.models import Question
 
 
-admin.site.register(Question)  # type: ignore
+cast(Any, admin.site).register(Question)
