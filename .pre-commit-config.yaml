@@ -82,6 +82,9 @@ repos:
     rev: v0.942
     hooks:
       - id: mypy
+        additional_dependencies:
+          - beartype==0.10.4
+          - django-stubs==1.10
         exclude: /migrations/.*\.py
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.1.0
