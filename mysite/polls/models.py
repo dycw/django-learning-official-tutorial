@@ -21,7 +21,8 @@ class Question(Model):
 
     @beartype
     def was_published_recently(self) -> bool:
-        return self.pub_date >= now() - dt.timedelta(days=1)
+        dt_now = now()
+        return dt_now - dt.timedelta(days=1) <= self.pub_date <= dt_now
 
 
 class Choice(Model):

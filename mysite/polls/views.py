@@ -8,6 +8,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django.shortcuts import render
 from django.urls import reverse
+from django.utils.timezone import now
 from django.views.generic import DetailView as _DetailView
 from django.views.generic import ListView as _ListView
 from polls.models import Choice
@@ -28,7 +29,9 @@ class IndexView(ListViewQuestion):
 
     @beartype
     def get_queryset(self) -> QuerySet[Question]:
-        return Question.objects.order_by("-pub_date")[:5]
+        return Question.objects.filter(pub_date__lte=now()).order_by(
+            "-pub_date"
+        )[:5]
 
 
 class DetailView(DetailViewQuestion):
