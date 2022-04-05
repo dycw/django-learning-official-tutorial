@@ -1,7 +1,5 @@
 import datetime as dt
 from typing import Any
-from typing import Callable
-from typing import TypeVar
 from typing import cast
 
 from beartype import beartype
@@ -15,8 +13,7 @@ from django.db.models import Model
 from django.utils.timezone import now
 
 
-_TCallable = TypeVar("_TCallable", bound=Callable[..., Any])
-display = cast(Callable[..., Callable[[_TCallable], _TCallable]], _display)
+display = cast(Any, _display)
 
 
 class Question(Model):
@@ -34,6 +31,9 @@ class Question(Model):
     def was_published_recently(self) -> bool:
         dt_now = now()
         return dt_now - dt.timedelta(days=1) <= self.pub_date <= dt_now
+
+
+aaaa = Question().was_published_recently
 
 
 class Choice(Model):
