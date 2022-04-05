@@ -1,9 +1,8 @@
 import datetime as dt
-from typing import Any
 from typing import cast
 
 from beartype import beartype
-from django.contrib.admin import display as _display
+from django.contrib.admin import display
 from django.db.models import CASCADE
 from django.db.models import CharField
 from django.db.models import DateTimeField
@@ -11,9 +10,6 @@ from django.db.models import ForeignKey
 from django.db.models import IntegerField
 from django.db.models import Model
 from django.utils.timezone import now
-
-
-display = cast(Any, _display)
 
 
 class Question(Model):
@@ -25,15 +21,12 @@ class Question(Model):
         return self.question_text
 
     @beartype
-    @display(
+    @display(  # type: ignore
         boolean=True, ordering="pub_date", description="Published recently?"
     )
     def was_published_recently(self) -> bool:
         dt_now = now()
         return dt_now - dt.timedelta(days=1) <= self.pub_date <= dt_now
-
-
-aaaa = Question().was_published_recently
 
 
 class Choice(Model):
