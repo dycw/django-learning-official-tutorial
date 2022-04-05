@@ -38,6 +38,12 @@ class DetailView(DetailViewQuestion):
     model = Question
     template_name = "polls/detail.html"
 
+    @beartype
+    def get_queryset(self) -> QuerySet[Question]:
+        """Excludes any questions that aren't published yet."""
+
+        return Question.objects.filter(pub_date__lte=now())
+
 
 class ResultsView(DetailViewQuestion):
     model = Question
