@@ -15,12 +15,8 @@ from polls.models import Choice
 from polls.models import Question
 
 
-if TYPE_CHECKING:
-    ListViewQuestion = _ListView[Question]
-    DetailViewQuestion = _DetailView[Question]
-else:
-    ListViewQuestion = _ListView
-    DetailViewQuestion = _DetailView
+ListViewQuestion = _ListView[Question] if TYPE_CHECKING else _ListView
+DetailViewQuestion = _DetailView[Question] if TYPE_CHECKING else _DetailView
 
 
 class IndexView(ListViewQuestion):
