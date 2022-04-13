@@ -1,0 +1,22 @@
+{% extends "admin/base.html" %}
+
+<!-- prettier-ignore -->
+{% block title %}
+
+{% if subtitle %} {{ subtitle
+}} | {% endif %}{{ title }} | {{ site_title|default:_('Django site admin') }}
+<!-- prettier-ignore -->
+{% endblock %}
+
+<!-- prettier-ignore -->
+{% block branding %}
+<h1 id="site-name">
+  <a href="{% url 'admin:index' %}">Polls Administration</a>
+</h1>
+<!-- prettier-ignore -->
+{% endblock %}
+
+<!-- prettier-ignore -->
+{% block nav-global %}
+<!-- prettier-ignore -->
+{% endblock %}

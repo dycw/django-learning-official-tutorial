@@ -2,6 +2,7 @@ import datetime as dt
 from typing import cast
 
 from beartype import beartype
+from django.contrib.admin import display
 from django.db.models import CASCADE
 from django.db.models import CharField
 from django.db.models import DateTimeField
@@ -20,6 +21,9 @@ class Question(Model):
         return self.question_text
 
     @beartype
+    @display(  # type: ignore
+        boolean=True, ordering="pub_date", description="Published recently?"
+    )
     def was_published_recently(self) -> bool:
         dt_now = now()
         return dt_now - dt.timedelta(days=1) <= self.pub_date <= dt_now
